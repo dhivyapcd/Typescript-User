@@ -5,9 +5,14 @@ import Userform from "./Userform";
 import { useState, useRef } from "react";
 import { SelectedUser } from "./SelectedUser";
 
-
+interface user{
+  id:number,
+  fname:string,
+  lname:string,
+  done:boolean
+}
 function App(props: any) {
-  const [users, setUsers] = useState([
+  const [users, setUsers] = useState<user[]>([
     { id: 0, fname: "AAA", lname: "AAA", done: false },
     { id: 1, fname: "BBB", lname: "BBB", done: false },
     { id: 2, fname: "CCC", lname: "CCC", done: false },
